@@ -5,7 +5,7 @@ data "google_compute_zones" "available" {
 resource "google_compute_instance" "default" {
   project      = google_project.project.project_id
   zone         = data.google_compute_zones.available.names[0]
-  name         = "tf-compute-1"
+  name         = "tf-compute"
   machine_type = "f1-micro"
 
   boot_disk {
